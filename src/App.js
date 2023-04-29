@@ -1,4 +1,12 @@
 import './App.css';
+import Nav from "./Nav/Nav"
+import Home from "./Home/Home"
+import Auth from "./Auth/Auth"
+import PTOT from "./PTOT/PTOT"
+import APOS from "./APOS/APOS"
+import Other from "./Other/Other"
+
+
 
 function App() {
   return (
