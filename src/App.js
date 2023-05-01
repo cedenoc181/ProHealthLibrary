@@ -1,6 +1,6 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom"
-import Nav from "./Nav/Nav"
+import Navigation from "./Nav/Navigation"
 import Home from "./Home/Home"
 import Auth from "./Auth/Auth"
 import AuthPDF from "./Auth/AuthPDF"
@@ -15,9 +15,9 @@ import OtherPDF from "./Other/OtherPDF"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-dark w-full h-screen">
+<Navigation />
 
-        <Nav />
 {/* install react pdf and make layout before beginning to code  */}
             <Routes>
               <Route path="/" element={<Home />}>
@@ -41,7 +41,7 @@ function App() {
               <Route path="/Other" element={<Other />}>
                 <Route path="/Other/:OtherId" element={<OtherPDF/>}/>
               </Route>
-              
+
             </Routes>
 
     </div>
