@@ -2,7 +2,7 @@ import React from 'react'
 
 function PTOTPageDetails() {
   return (
-    <div>PTOTPageDetails</div>
+    <div className="bg-gray-100 w-fill h-screen">PTOTPageDetails</div>
   )
 }
 

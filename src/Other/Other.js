@@ -2,7 +2,7 @@ import React from 'react'
 
 function Other() {
   return (
-    <div>Other</div>
+    <div className="bg-gray-100 w-fill h-screen">Other</div>
   )
 }
 

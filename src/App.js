@@ -21,9 +21,6 @@ function App() {
 {/* install react pdf and make layout before beginning to code  */}
             <Routes>
               <Route path="/" element={<Home />}>
-                  <Route path="/Home/Auth" element={<Auth />}/>
-                  <Route path="/Home/PTOT" element={<PTOT />}/>
-                  <Route path="/Home/APOS" element={<APOS />}/>
               </Route>
 
               <Route path="/Auth" element={<Auth />}>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function OtherPageDetails() {
   return (
-    <div>OtherPageDetails</div>
+    <div className="bg-gray-100 w-fill h-screen">OtherPageDetails</div>
   )
 }
 
