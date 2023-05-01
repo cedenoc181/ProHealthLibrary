@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Home.css"
 
 function Home() {
   return (
@@ -14,9 +15,9 @@ function Home() {
         </div>
 
         <div className="flex justify-around border-t-2 border-gray-300">
-            <a href="/Auth"><button className="border border-blue-600 border-2 p-1 text-blue-500 rounded font-semibold">Authorization PDF</button></a>
-            <a href="/PTOT"><button className="border border-blue-600 border-2 p-1 text-blue-500 rounded font-semibold">Physical and Occupational therapy PDF </button></a>
-            <a href="/APOS"><button className="border border-blue-600 border-2 p-1 text-blue-500 rounded font-semibold">APOS therapy PDF</button></a>
+            <a href="/Auth"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">Authorization PDF</button></a>
+            <a href="/PTOT"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">Physical and Occupational therapy PDF </button></a>
+            <a href="/APOS"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">APOS therapy PDF</button></a>
         </div>
     </div>
   )
