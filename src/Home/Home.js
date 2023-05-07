@@ -12,7 +12,7 @@ function Home() {
             </p>
         </div>
 
-        <div className="flex justify-around border-t-2 shadow-xs border-gray-300">
+        <div className="flex justify-around border-t-2 shadow-xs border-gray-200">
             <a href="/PTOT"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">PT OT PDF </button></a>
             <a href="/APOS"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">APOS therapy PDF</button></a>
             <a href="/Auth"><button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">Authorization PDF</button></a>
