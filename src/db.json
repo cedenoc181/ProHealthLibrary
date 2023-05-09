@@ -1,12 +1,13 @@
-[ 
-    {
+{
+    "APOS" :[ 
+{
     "id" : 1,
     "PDF" : ".APOS-files/APOS-TP.pdf",
     "Document_Title" : "APOS Treatment Plan English form",
     "Image": "./APOS-Images/APOS-TP-Cover.jpg" 
 },
 
- {
+{
     "id" : 2,
     "PDF" : ".APOS-files/APOS-TP-S.pdf",
     "Document_Title" : "APOS Treatment Plan Spanish form",
@@ -73,4 +74,14 @@
     "Document_Title" : "APOS Pick up and Sign off form",
     "Image": "./APOS-Images/APOS-PUSO-cover.jpg" 
 }
-]
+],
+"Auth" : [{
+
+}],
+"PTOT" : [{
+
+}],
+"Others" : [{
+    
+}]
+}
