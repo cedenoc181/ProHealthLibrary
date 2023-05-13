@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import FHF from "./Other-files/Fhard.pdf";
+// import FHF from "./Other-files/Fhard.pdf";
 
-function OtherPDF() {
+function OtherPDF({pdfFiles}) {
 
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
+  console.log(pdfFiles)
+  
   function onDocumentSuccess({numPages}) {
     setNumPages(numPages)
     }
@@ -15,7 +17,7 @@ function OtherPDF() {
   return (
     <div className="bg-gray-100 w-fill h-screen">
 
-<Document file={FHF} onLoadSuccess={onDocumentSuccess}>
+<Document file="" onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
     renderTextLayer={false}
