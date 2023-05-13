@@ -10,7 +10,7 @@ function PTOTPDF() {
       <div className="grid">
         <div className="image-container">
           <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
+            className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
             src={intake_E_cover}
             alt="PT intake English"
           />
