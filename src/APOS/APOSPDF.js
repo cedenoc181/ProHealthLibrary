@@ -18,7 +18,7 @@ function APOSPDF() {
 
   return (
 <div className="container">
-      <div className="grid">
+      <div className="grid flex justify-center">
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
