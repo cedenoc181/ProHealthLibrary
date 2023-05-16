@@ -1,5 +1,5 @@
 import React from 'react';
-import checklist from "./Others-Images/Others-APOS-Chhecklist-cover.jpg"
+import checklist from "./Others-Images/Others-APOS-Checklist-cover.jpg"
 import fitting_E from "./Others-Images/Others-APOS-Fitting-SO.jpg"
 import fitting_S from "./Others-Images/Others-APOS-Fitting-SO-S.jpg"
 import DA_E from "./Others-Images/Others-DA-E.jpg"
@@ -19,8 +19,8 @@ function OtherPDF() {
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-            src={APOS_1_Year_E}
-            alt="APOS Post 1 year Eval English"
+            src={checklist}
+            alt="APOS checklist"
           />
           <p className="image-label"> APOS Checklist</p>
         </div>
@@ -28,52 +28,52 @@ function OtherPDF() {
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_1_Year_S}
-            alt="APOS Post 1 Year Eval Spanish"
+            src={fitting_E}
+            alt="APOS Fitting form English"
           />
-          <p className="image-label"> APOS Post 1 Year Eval Spanish</p>
+          <p className="image-label"> APOS Fitting form English</p>
         </div>
 
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Eval_E}
-            alt="APOS Evaluation English"
+            src={fitting_S}
+            alt="APOS Fitting form Spanish"
           />
-          <p className="image-label"> APOS Evaluation English </p>
+          <p className="image-label"> APOS Fitting form Spanish </p>
         </div>
 
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Eval_S}
-            alt="APOS Evaluation Spanish"
+            src={DA_E}
+            alt="Direct Access form English"
           />
-          <p className="image-label"> APOS Evaluation Spanish</p>
+          <p className="image-label"> Direct Access form English</p>
         </div>
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Intake}
-            alt="APOS Intake"
+            src={DA_S}
+            alt="Direct Access form Spanish"
           />
-          <p className="image-label"> APOS Intake</p>
+          <p className="image-label"> Direct Access form Spanish</p>
         </div>
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_TP_E}
-            alt="APOS Treatment Plan English"
+            src={FH_E}
+            alt="Financial Hardshiop form English"
           />
-          <p className="image-label"> APOS Treatment Plan English </p>
+          <p className="image-label"> Financial Hardshiop form English </p>
         </div>
         <div className="image-container">
           <img
             className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_TP_S}
-            alt="APOS Treatment Plan Spanish"
+            src={FH_S}
+            alt="Financial Hardshiop form Spanish"
           />
-          <p className="image-label"> APOS Treatment Plan Spanish</p>
+          <p className="image-label"> Financial Hardshiop form Spanish</p>
         </div>
        
       </div>

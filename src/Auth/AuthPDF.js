@@ -1,5 +1,8 @@
 import React from 'react'
-import AFAPOS from "./Auth-files/all forms 2022.pdf"
+import empire from "./Auth-Images/Auth-Empire.jpg"
+import metroPlus from "./Auth-Images/Auth-MetroPlus.jpg"
+import orthonet from "./Auth-Images/Auth-Orthonet.jpg"
+import palladian from "./Auth-Images/Auth-Palladian.jpg"
 
 
 function AuthPDF() {
@@ -8,8 +11,45 @@ function AuthPDF() {
 
   return (
     <div className="bg-gray-100 w-fill h-screen">
-<iframe id="fred" style={{border:"1px"}} title="PDF in an i-Frame" src={AFAPOS} frameborder="1" scrolling="auto" height="100%" width="100%" ></iframe>
+<div className="container">
+      <div className="grid flex justify-center">
+        <div className="image-container">
+          <img
+            className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+            src={empire}
+            alt="Empire"
+          />
+          <p className="image-label"> Empire Blue Cross Blue Shield Auth</p>
+        </div>
 
+        <div className="image-container">
+          <img
+            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
+            src={metroPlus}
+            alt="MetroPlus"
+          />
+          <p className="image-label"> MetroPlus Auth</p>
+        </div>
+
+        <div className="image-container">
+          <img
+            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
+            src={orthonet}
+            alt="orthonet"
+          />
+          <p className="image-label"> Orthonet Auth </p>
+        </div>
+
+        <div className="image-container">
+          <img
+            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
+            src={palladian}
+            alt="palladian"
+          />
+          <p className="image-label"> palladian Auth</p>
+        </div>
+    </div>
+    </div>
     </div>
   )
 }
