@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Auth.css"
 import AuthPDF from "./AuthPDF"
 
 function Auth() {
-  
+
   return (
     <div className="bg-gray-100 w-fill h-screen">
           <div className="Prompt">
@@ -17,3 +18,4 @@ function Auth() {
 }
 
 export default Auth
+

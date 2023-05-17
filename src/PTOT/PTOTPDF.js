@@ -5,6 +5,36 @@ import R_intake_E_cover from "./PTOT-Images/PTOT-R-Intake-E-cover.jpg"
 import R_intake_S_cover from "./PTOT-Images/PTOT-R-Intake-S-cover.jpg"
 
 function PTOTPDF() {
+
+
+  const [overview, setOverview] = useState(true);
+  const [overview2, setOverview2] = useState(true);
+  const [overview3, setOverview3] = useState(true);
+  const [overview4, setOverview4] = useState(true);
+  
+  function handleClick(){
+    setOverview(!overview);
+  }
+  
+  function handleClick2(){
+    setOverview2(!overview2);
+  }
+  
+  
+  function handleClick3(){
+    setOverview3(!overview3);
+  }
+  
+  
+  function handleClick4(){
+    setOverview4(!overview4);
+  }
+
+
+
+
+
+
   return (
     <div className="container">
       <div className="grid">

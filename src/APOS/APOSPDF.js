@@ -15,6 +15,30 @@ import APOS_Checklist from "./APOS-Images/APOS-Checklist-cover.jpg"
 
 function APOSPDF() {
 
+  const [overview, setOverview] = useState(true);
+  const [overview2, setOverview2] = useState(true);
+  const [overview3, setOverview3] = useState(true);
+  const [overview4, setOverview4] = useState(true);
+  
+  function handleClick(){
+    setOverview(!overview);
+  }
+  
+  function handleClick2(){
+    setOverview2(!overview2);
+  }
+  
+  
+  function handleClick3(){
+    setOverview3(!overview3);
+  }
+  
+  
+  function handleClick4(){
+    setOverview4(!overview4);
+  }
+
+
 
   return (
 <div className="container">
