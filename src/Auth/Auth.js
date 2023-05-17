@@ -8,7 +8,7 @@ function Auth() {
     <div className="bg-gray-100 w-fill h-screen">
           <div className="Prompt">
           <p className="p-10 font-semibold text-gray-600 text-3xl text-center">
-            Authirization PDF's available below, Orthonet, MetroPlus and more.
+            Authorization PDF's available below, Orthonet, MetroPlus and more.
           </p>
     </div> 
 <AuthPDF />

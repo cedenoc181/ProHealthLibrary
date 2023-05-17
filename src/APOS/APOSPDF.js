@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import APOS_TP_E from "./APOS-Images/APOS-TP-cover.jpg"
 import APOS_TP_S from "./APOS-Images/APOS-TP-S-cover.jpg"
 import APOS_1_Year_E from "./APOS-Images/APOS-1-year-intake-E-cover.jpg"
@@ -158,3 +158,20 @@ function APOSPDF() {
 
 
 export default APOSPDF
+
+// { overview ? (
+//   <div>
+//     <p className="image-label">Returning Intake Spanish</p>
+//   <img
+//     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+//     src={R_intake_S_cover}
+//     alt="Returning Intake Spanish"
+//     onClick={handleClick4}
+//   />
+//   </div>
+//   ) :
+//         <div>
+//           <iframe title="Returning Intake Spanish" id="Returning Intake Spanish" style={{"border":"1px"}} src={R_intake_S_pdf} frameborder="1" height="450" width="450"></iframe>
+//             <button className="close mt-5 flex align-center justify-center" onClick={handleClick4}>Close</button>
+//         </div>
+//         }
