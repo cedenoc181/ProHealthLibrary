@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FallingLines } from  'react-loader-spinner';
 // jpg imports
 import intake_E_cover from "./PTOT-Images/PTOT-Intake-E-cover.jpg";
 import intake_S_cover from "./PTOT-Images/PTOT-Intake-S-cover.jpg";
@@ -17,27 +18,116 @@ function PTOTPDF() {
   const [overview3, setOverview3] = useState(true);
   const [overview4, setOverview4] = useState(true);
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
+  const [isLoading3, setIsLoading3] = useState(false);
+  const [isLoading4,setIsLoading4] = useState(false);
+
+
+   const imageRef = useRef(null);
+
+
+   useEffect(() => {
+    if (isLoading)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading(false);
+        setOverview(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading]);
+
+
+  useEffect(() => {
+    if (isLoading2)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading2(false);
+        setOverview2(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading2]);
+
+  useEffect(() => {
+    if (isLoading3)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading3(false);
+        setOverview3(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading3]);
+
+  useEffect(() => {
+    if (isLoading4)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading4(false);
+        setOverview4(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading4]);
+
+
+  const handleRevert = () => {
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+  };
+
+
+
   function handleClick() {
-    setOverview(!overview);
+    setIsLoading(true);
+
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
   }
 
   function handleClick2() {
-    setOverview2(!overview2);
+    setIsLoading2(true);
+
+    setOverview(true);
+    setOverview3(true);
+    setOverview4(true);
   }
 
   function handleClick3() {
-    setOverview3(!overview3);
+    setIsLoading3(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview4(true);
   }
 
   function handleClick4() {
-    setOverview4(!overview4);
+    setIsLoading4(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
   }
 
   return (
     <div className="container">
       <div className="grid">
         <div className="image-container">
-          {overview ? (
+          {isLoading ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview ? (
             <div>
               <p className="image-label">Intake English</p>
               <img
@@ -58,15 +148,20 @@ function PTOTPDF() {
                 height="450"
                 width="450"
               ></iframe>
-              <button className="close mt-5" onClick={handleClick}>
+              <button className="close mt-5" onClick={handleRevert}>
                 Close
               </button>
             </div>
-          )}
+          ))}
         </div>
 
         <div className="image-container">
-          {overview2 ? (
+          {isLoading2 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview2 ? (
             <div>
               <p className="image-label">Intake Spanish</p>
               <img
@@ -87,15 +182,20 @@ function PTOTPDF() {
                 height="450"
                 width="450"
               ></iframe>
-              <button className="close mt-5" onClick={handleClick2}>
+              <button className="close mt-5" onClick={handleRevert}>
                 Close
               </button>
             </div>
-          )}
+          ))}
         </div>
 
         <div className="image-container">
-          {overview3 ? (
+          {isLoading3 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview3 ? (
             <div>
               <p className="image-label">Returning Intake English</p>
               <img
@@ -116,15 +216,20 @@ function PTOTPDF() {
                 height="450"
                 width="450"
               ></iframe>
-              <button className="close mt-5" onClick={handleClick3}>
+              <button className="close mt-5" onClick={handleRevert}>
                 Close
               </button>
             </div>
-          )}
+          ))}
         </div>
 
         <div className="image-container">
-          {overview4 ? (
+          {isLoading4 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview4 ? (
             <div>
               <p className="image-label">Returning Intake Spanish</p>
               <img
@@ -147,11 +252,11 @@ function PTOTPDF() {
               >
                 Returning Intake Spanish
               </iframe>
-              <button className="close mt-5 " onClick={handleClick4}>
+              <button className="close mt-5 " onClick={handleRevert}>
                 Close
               </button>
             </div>
-          )}
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FallingLines } from  'react-loader-spinner';
 // jpg imports below
 import Checklist from "./Others-Images/Others-APOS-Checklist-cover.jpg";
 import fitting_E from "./Others-Images/Others-APOS-Fitting-SO.jpg";
@@ -25,32 +26,196 @@ function OtherPDF() {
   const [overview6, setOverview6] = useState(true);
   const [overview7, setOverview7] = useState(true);
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
+  const [isLoading3, setIsLoading3] = useState(false);
+  const [isLoading4,setIsLoading4] = useState(false);
+  const [isLoading5, setIsLoading5] = useState(false);
+  const [isLoading6, setIsLoading6] = useState(false);
+  const [isLoading7, setIsLoading7] = useState(false);
+
+  const imageRef = useRef(null);
+
+
+  useEffect(() => {
+    if (isLoading)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading(false);
+        setOverview(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading]);
+
+
+  useEffect(() => {
+    if (isLoading2)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading2(false);
+        setOverview2(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading2]);
+
+  useEffect(() => {
+    if (isLoading3)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading3(false);
+        setOverview3(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading3]);
+
+  useEffect(() => {
+    if (isLoading4)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading4(false);
+        setOverview4(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading4]);
+
+  useEffect(() => {
+    if (isLoading5)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading5(false);
+        setOverview5(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading5]);
+
+  useEffect(() => {
+    if (isLoading6)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading6(false);
+        setOverview6(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading6]);
+
+  useEffect(() => {
+    if (isLoading7)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading7(false);
+        setOverview7(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading7]);
+
+
+  const handleRevert = () => {
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+  };
+
+
+
+
+
+
+
+
+
   function handleClick() {
-    setOverview(!overview);
+    setIsLoading(true);
+
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
   }
 
   function handleClick2() {
-    setOverview2(!overview2);
+    setIsLoading2(true);
+
+    setOverview(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
   }
 
   function handleClick3() {
-    setOverview3(!overview3);
+    setIsLoading3(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
   }
 
   function handleClick4() {
-    setOverview4(!overview4);
+    setIsLoading4(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
   }
 
   function handleClick5() {
-    setOverview5(!overview5);
+    setIsLoading5(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview6(true);
+    setOverview7(true);
   }
 
   function handleClick6() {
-    setOverview6(!overview6);
+    setIsLoading6(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview7(true);
   }
 
   function handleClick7() {
-    setOverview7(!overview7);
+    setIsLoading7(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
   }
 
   return (
@@ -58,7 +223,12 @@ function OtherPDF() {
       <div className="container">
         <div className="grid flex justify-center">
           <div className="image-container">
-            {overview ? (
+            {isLoading ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview ? (
               <div>
                 <p className="image-label"> APOS Checklist </p>
                 <img
@@ -81,16 +251,21 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview2 ? (
+            {isLoading2 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview2 ? (
               <div>
                 <p className="image-label"> APOS Fitting form English </p>
                 <img
@@ -113,16 +288,21 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick2}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview3 ? (
+            {isLoading3 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview3 ? (
               <div>
                 <p className="image-label"> APOS Fitting form Spanish </p>
                 <img
@@ -145,16 +325,21 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick3}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview4 ? (
+            {isLoading4 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview4 ? (
               <div>
                 <p className="image-label"> Direct Access Form English </p>
                 <img
@@ -177,16 +362,21 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick4}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview5 ? (
+            {isLoading5 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview5 ? (
               <div>
                 <p className="image-label"> Direct Access Form Spanish </p>
                 <img
@@ -209,16 +399,21 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick5}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview6 ? (
+            {isLoading6 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview6 ? (
               <div>
                 <p className="image-label">Financial Hardship Form</p>
                 <img
@@ -241,15 +436,20 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick6}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
           <div className="image-container">
-            {overview7 ? (
+            {isLoading7 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview7 ? (
               <div>
                 <p className="image-label">Financial Hardship Form Spanish</p>
                 <img
@@ -272,12 +472,12 @@ function OtherPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick7}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>

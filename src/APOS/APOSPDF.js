@@ -576,6 +576,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading5 ? ( <FallingLines
   visible={true}
@@ -600,6 +601,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading6 ? ( <FallingLines
   visible={true}
@@ -624,6 +626,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading7 ? ( <FallingLines
   visible={true}
@@ -648,6 +651,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading8 ? ( <FallingLines
   visible={true}
@@ -672,6 +676,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading9 ? ( <FallingLines
   visible={true}
@@ -696,6 +701,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading10 ? ( <FallingLines
   visible={true}
@@ -720,6 +726,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading11 ? ( <FallingLines
   visible={true}
@@ -744,6 +751,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+
         <div className="image-container">
         { isLoading12 ? ( <FallingLines
   visible={true}
@@ -768,6 +776,7 @@ function APOSPDF() {
         </div>
         )}
         </div>
+        
         <div className="image-container">
         { isLoading13 ? ( <FallingLines
   visible={true}

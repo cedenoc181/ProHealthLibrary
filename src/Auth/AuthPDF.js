@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FallingLines } from  'react-loader-spinner';
 // jpg imports below
 import empire from "./Auth-Images/Auth-Empire.jpg";
 import metroPlus from "./Auth-Images/Auth-MetroPlus.jpg";
@@ -16,20 +17,104 @@ function AuthPDF() {
   const [overview3, setOverview3] = useState(true);
   const [overview4, setOverview4] = useState(true);
 
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
+  const [isLoading3, setIsLoading3] = useState(false);
+  const [isLoading4,setIsLoading4] = useState(false);
+
+   const imageRef = useRef(null);
+
+   useEffect(() => {
+    if (isLoading)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading(false);
+        setOverview(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading]);
+
+
+  useEffect(() => {
+    if (isLoading2)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading2(false);
+        setOverview2(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading2]);
+
+  useEffect(() => {
+    if (isLoading3)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading3(false);
+        setOverview3(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading3]);
+
+  useEffect(() => {
+    if (isLoading4)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading4(false);
+        setOverview4(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading4]);
+
+
+
+
+  const handleRevert = () => {
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+  };
+
+
   function handleClick() {
-    setOverview(!overview);
+    setIsLoading(true);
+
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
   }
 
   function handleClick2() {
-    setOverview2(!overview2);
+    setIsLoading2(true);
+
+    setOverview(true);
+    setOverview3(true);
+    setOverview4(true);
   }
 
   function handleClick3() {
-    setOverview3(!overview3);
+    setIsLoading3(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview4(true);
   }
 
   function handleClick4() {
-    setOverview4(!overview4);
+    setIsLoading4(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
   }
 
   return (
@@ -37,7 +122,12 @@ function AuthPDF() {
       <div className="container">
         <div className="grid flex justify-center">
           <div className="image-container">
-            {overview ? (
+            {isLoading ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview ? (
               <div>
                 <p className="image-label">
                   {" "}
@@ -63,16 +153,21 @@ function AuthPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview2 ? (
+            {isLoading2 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview2 ? (
               <div>
                 <p className="image-label"> MetroPlus Auth </p>
                 <img
@@ -95,16 +190,21 @@ function AuthPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick2}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview3 ? (
+            {isLoading3 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview3 ? (
               <div>
                 <p className="image-label"> Orthonet Auth</p>
                 <img
@@ -127,16 +227,21 @@ function AuthPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick3}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
 
           <div className="image-container">
-            {overview4 ? (
+            {isLoading4 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview4 ? (
               <div>
                 <p className="image-label"> Palladian Auth </p>
                 <img
@@ -159,12 +264,12 @@ function AuthPDF() {
                 ></iframe>
                 <button
                   className="close mt-5 flex align-center justify-center"
-                  onClick={handleClick4}
+                  onClick={handleRevert}
                 >
                   Close
                 </button>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>
