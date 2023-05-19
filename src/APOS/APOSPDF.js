@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
+import { FallingLines } from  'react-loader-spinner'
 // jpg imports 
 import APOS_TP_E from "./APOS-Images/APOS-TP-cover.jpg"
 import APOS_TP_S from "./APOS-Images/APOS-TP-S-cover.jpg"
@@ -43,68 +44,430 @@ function APOSPDF() {
   const [overview11, setOverview11] = useState(true);
   const [overview12, setOverview12] = useState(true);
   const [overview13, setOverview13] = useState(true);
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
+  const [isLoading3, setIsLoading3] = useState(false);
+  const [isLoading4,setIsLoading4] = useState(false);
+  const [isLoading5, setIsLoading5] = useState(false);
+  const [isLoading6, setIsLoading6] = useState(false);
+  const [isLoading7, setIsLoading7] = useState(false);
+  const [isLoading8, setIsLoading8] = useState(false);
+  const [isLoading9, setIsLoading9] = useState(false);
+  const [isLoading10, setIsLoading10] = useState(false);
+  const [isLoading11, setIsLoading11] = useState(false);
+  const [isLoading12, setIsLoading12] = useState(false);
+  const [isLoading13, setIsLoading13] = useState(false);
   
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    if (isLoading)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading(false);
+        setOverview(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading]);
+
+
+  useEffect(() => {
+    if (isLoading2)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading2(false);
+        setOverview2(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading2]);
+
+  useEffect(() => {
+    if (isLoading3)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading3(false);
+        setOverview3(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading3]);
+
+  useEffect(() => {
+    if (isLoading4)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading4(false);
+        setOverview4(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading4]);
+
+  useEffect(() => {
+    if (isLoading5)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading5(false);
+        setOverview5(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading5]);
+
+  useEffect(() => {
+    if (isLoading6)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading6(false);
+        setOverview6(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading6]);
+
+  useEffect(() => {
+    if (isLoading7)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading7(false);
+        setOverview7(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading7]);
+
+  useEffect(() => {
+    if (isLoading8)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading8(false);
+        setOverview8(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading8]);
+
+  useEffect(() => {
+    if (isLoading9)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading9(false);
+        setOverview9(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading9]);
+
+  useEffect(() => {
+    if (isLoading10)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading10(false);
+        setOverview10(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading10]);
+
+  useEffect(() => {
+    if (isLoading11)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading11(false);
+        setOverview11(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading11]);
+
+  useEffect(() => {
+    if (isLoading12)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading12(false);
+        setOverview12(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading12]);
+
+  useEffect(() => {
+    if (isLoading13)
+    
+    {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading13(false);
+        setOverview13(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading13]);
+
+
+
+
+  const handleRevert = () => {
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
+  };
+
   function handleClick(){
-    setOverview(!overview);
+    setIsLoading(true);
+
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
+  
   }
   
   function handleClick2(){
-    setOverview2(!overview2);
+    setIsLoading2(true);
+
+    setOverview(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
   
   
   function handleClick3(){
-    setOverview3(!overview3);
+    setIsLoading3(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
   
 
   function handleClick4(){
-    setOverview4(!overview4);
+    setIsLoading4(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick5(){
-    setOverview5(!overview5);
+    setIsLoading5(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick6(){
-    setOverview6(!overview6);
+    setIsLoading6(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick7(){
-    setOverview7(!overview7);
+    setIsLoading7(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick8(){
-    setOverview8(!overview8);
+    setIsLoading8(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick9(){
-    setOverview9(!overview9);
+    setIsLoading9(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick10(){
-    setOverview10(!overview10);
+    setIsLoading10(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview11(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick11(){
-    setOverview11(!overview11);
+    setIsLoading11(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview12(true);
+    setOverview13(true);
   }
 
 
   function handleClick12(){
-    setOverview12(!overview12);
+    setIsLoading12(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview13(true);
   }
 
 
   function handleClick13(){
-    setOverview13(!overview13);
+    setIsLoading13(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
+    setOverview7(true);
+    setOverview8(true);
+    setOverview9(true);
+    setOverview10(true);
+    setOverview11(true);
+    setOverview12(true);
   }
 
 
@@ -113,11 +476,17 @@ function APOSPDF() {
 <div className="container">
       <div className="grid flex justify-center">
         <div className="image-container">
-        { overview ? (
+        { isLoading ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview ? (
   <div>
     <p className="image-label"> APOS Post 1 Year Eval English </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
     src={APOS_1_Year_E}
     alt="APOS 1 year eval English"
     onClick={handleClick}
@@ -125,18 +494,25 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe title="APOS 1 year eval English" id="APOS 1 year eval English" style={{"border":"1px"}} src={post_1_year_e_pdf} frameborder="1" height="450" width="450"></iframe>
-            <button className="close mt-5" onClick={handleClick}>Close</button>
+
+          <iframe  ref={imageRef} title="APOS 1 year eval English" id="APOS 1 year eval English" style={{"border":"1px"}} src={post_1_year_e_pdf} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
-        }
+        )}
         </div>
 
         <div className="image-container">
-        { overview2 ? (
+        { isLoading2 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview2 ? (
   <div>
     <p className="image-label"> APOS Post 1 Year Eval Spanish </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
     src={APOS_1_Year_S}
     alt="APOS 1 year eval Spanish"
     onClick={handleClick2}
@@ -144,100 +520,277 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe title="APOS 1 year eval Spanish" id="APOS 1 year eval Spanish" style={{"border":"1px"}} src={post_1_year_s_pdf} frameborder="1" height="450" width="450"></iframe>
-            <button className="close mt-5" onClick={handleClick2}>Close</button>
+          <iframe ref={imageRef} title="APOS 1 year eval Spanish" id="APOS 1 year eval Spanish" style={{"border":"1px"}} src={post_1_year_s_pdf} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
-        }
-        </div>
-
-        <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Eval_E}
-            alt="APOS Evaluation English"
-          />
-          <p className="image-label"> APOS Evaluation English </p>
+        )}
         </div>
 
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Eval_S}
-            alt="APOS Evaluation Spanish"
-          />
-          <p className="image-label"> APOS Evaluation Spanish</p>
+
+  { isLoading3 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview3 ? (
+  <div>
+    <p className="image-label"> APOS Evaulation English </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Eval_E}
+    alt="APOS Eval_E"
+    onClick={handleClick3}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Eval form english" id="APOS Eval form english" style={{"border":"1px"}} src={eval_e} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
+        </div>
+
+        <div className="image-container">
+     { isLoading4 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): (overview4 ? (
+  <div>
+    <p className="image-label"> APOS Evaulation Spanish </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Eval_S}
+    alt="APOS Eval_S"
+    onClick={handleClick4}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe  ref={imageRef} title="APOS Eval form Spanish" id="APOS Eval form Spanish" style={{"border":"1px"}} src={eval_s} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Intake}
-            alt="APOS Intake"
-          />
-          <p className="image-label"> APOS Intake</p>
+        { isLoading5 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview5 ? (
+  <div>
+    <p className="image-label"> APOS Fitting Form English</p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Fitting_E}
+    alt="APOS Fitting SO E"
+    onClick={handleClick5}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Fitting SO E" id="APOS Fitting SO E" style={{"border":"1px"}} src={fitting_e} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_TP_E}
-            alt="APOS Treatment Plan English"
-          />
-          <p className="image-label"> APOS Treatment Plan English </p>
+        { isLoading6 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview6 ? (
+  <div>
+    <p className="image-label"> APOS Fitting Form Spanish</p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Fitting_S}
+    alt="APOS Fitting SO S"
+    onClick={handleClick6}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Fitting SO S" id="APOS Fitting SO S" style={{"border":"1px"}} src={fitting_s} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_TP_S}
-            alt="APOS Treatment Plan Spanish"
-          />
-          <p className="image-label"> APOS Treatment Plan Spanish</p>
+        { isLoading7 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview7 ? (
+  <div>
+    <p className="image-label"> APOS Treatment Plan Form English </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_TP_E}
+    alt="APOS Treatment plan English"
+    onClick={handleClick7}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Treatment Plan English" id="APOS Treatment Plan English" style={{"border":"1px"}} src={APOS_TP_E_pdf} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Fitting_E}
-            alt="APOS Fitting English"
-          />
-          <p className="image-label"> APOS Fitting English</p>
+        { isLoading8 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview8 ? (
+  <div>
+    <p className="image-label"> APOS Treatment Plan Form Spanish </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_TP_S}
+    alt="APOS Treatment plan Spanish"
+    onClick={handleClick8}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Treatment Plan Spanish" id="APOS Treatment Plan Spanish" style={{"border":"1px"}} src={APOS_TP_S_pdf} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Fitting_S}
-            alt="APOS Fitting Spanish"
-          />
-          <p className="image-label"> APOS Fitting Spanish</p>
+        { isLoading9 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview9 ? (
+  <div>
+    <p className="image-label"> APOS New Patient Intake Form </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Intake}
+    alt="APOS New Patient Intake Form"
+    onClick={handleClick9}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS New Patient Intake Form" id="APOS New Patient Intake Form" style={{"border":"1px"}} src={new_intake} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_PUSO}
-            alt="APOS Pick up sign off "
-          />
-          <p className="image-label"> APOS Pick up sign off </p>
+        { isLoading10 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview10 ? (
+  <div>
+    <p className="image-label"> APOS Follow up Form </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_FU}
+    alt="APOS Follow up Form"
+    onClick={handleClick10}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Follow up Form" id="APOS Follow up Form" style={{"border":"1px"}} src={follow_up} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_new_Questionaire}
-            alt="APOS Questionaire"
-          />
-          <p className="image-label"> APOS New Patient Questionaire </p>
+        { isLoading11 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview11 ? (
+  <div>
+    <p className="image-label"> APOS Pick up sign off Form </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_PUSO}
+    alt="APOS Pick up sign off Form"
+    onClick={handleClick11}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS PUSO Form" id="APOS Follow up Form" style={{"border":"1px"}} src={puso} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_FU}
-            alt="APOS Follow up questionaire"
-          />
-          <p className="image-label"> APOS Follow up Questionaire</p>
+        { isLoading12 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview12 ? (
+  <div>
+    <p className="image-label"> APOS New Patient Questionaire Form </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_new_Questionaire}
+    alt="APOS New Patient Questionaire Form"
+    onClick={handleClick12}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS New Patient Questionaire Form" id="APOS New Patient Questionaire Form" style={{"border":"1px"}} src={new_pt_questionaire} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
         <div className="image-container">
-          <img
-            className="img-thumbnail shadow-2xl hover:border-blue-700 cursor-pointer"
-            src={APOS_Checklist}
-            alt="APOS Checklist"
-          />
-          <p className="image-label"> APOS Checklist </p>
+        { isLoading13 ? ( <FallingLines
+  visible={true}
+  width="100"
+  ariaLabel="Falling-lines-loading"
+  color = '#0F659C'
+/>): ( overview13 ? (
+  <div>
+    <p className="image-label"> APOS Checklist Form </p>
+  <img
+    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+    ref={imageRef}
+    src={APOS_Checklist}
+    alt="APOS Checklist Form"
+    onClick={handleClick13}
+  />
+  </div>
+  ) :
+        <div>
+          <iframe ref={imageRef} title="APOS Checklist Form" id="APOS Checklist Form" style={{"border":"1px"}} src={checklist} frameborder="1" height="450" width="450"></iframe>
+            <button className="close mt-5" onClick={handleRevert}>Close</button>
+        </div>
+        )}
         </div>
 
       </div>
@@ -248,19 +801,19 @@ function APOSPDF() {
 
 export default APOSPDF
 
-{ overview3 ? (
-  <div>
-    <p className="image-label"> APOS Evaulation English </p>
-  <img
-    className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    src={APOS_Eval_E}
-    alt="APOS Eval_E"
-    onClick={handleClick2}
-  />
-  </div>
-  ) :
-        <div>
-          <iframe title="APOS 1 year eval Spanish" id="APOS 1 year eval Spanish" style={{"border":"1px"}} src={post_1_year_s_pdf} frameborder="1" height="450" width="450"></iframe>
-            <button className="close mt-5" onClick={handleClick2}>Close</button>
-        </div>
-        }
+// { overview13 ? (
+//   <div>
+//     <p className="image-label"> APOS Checklist Form </p>
+//   <img
+//     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+//     src={APOS_Checklist}
+//     alt="APOS Checklist Form"
+//     onClick={handleClick13}
+//   />
+//   </div>
+//   ) :
+//         <div>
+//           <iframe title="APOS Checklist Form" id="APOS Checklist Form" style={{"border":"1px"}} src={checklist} frameborder="1" height="450" width="450"></iframe>
+//             <button className="close mt-5" onClick={handleClick13}>Close</button>
+//         </div>
+//         }

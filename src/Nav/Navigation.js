@@ -33,7 +33,6 @@ function Navigation() {
   </li>
   <form class="flex ml-auto">
     <input class="mt-6 mr-3 border rounded-md border-gray-500 h-8  p-1 text-left border-2 hover:bg-blue-100 cursor-pointer" type="search" placeholder="Search PDF..." />
-    {/* <input class="mt-6 mr-1 p-1 border border-blue-500 border-2 rounded text-blue-600 hover:bg-gray-300 hover:text-blue-800 font-semibold cursor-pointer" type="submit"/> */}
   </form>
 </ul>
 </nav>
