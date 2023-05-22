@@ -41,7 +41,8 @@ function Authhome() {
           </button>
         </a>
         <Document file={ortho} onLoadSuccess={onDocumentSuccess}>
-    <Page 
+    <Page
+    className="doc"
     pageNumber={pageNumber}
     renderTextLayer={false}
     renderAnnotationLayer={false}

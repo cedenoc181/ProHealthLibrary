@@ -38,7 +38,7 @@ function PTOT() {
             PT OT PDF
           </button>
         </a>
-        <Document file={ptIntake} onLoadSuccess={onDocumentSuccess}>
+        <Document className="doc" file={ptIntake} onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
     renderTextLayer={false}

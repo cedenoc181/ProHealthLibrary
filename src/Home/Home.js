@@ -2,6 +2,7 @@ import React from "react";
 import APOS from "./APOS"
 import Auth from "./Authhome"
 import Ptot from "./PTOT"
+import "./Home.css"
 
 
 import "./Home.css";

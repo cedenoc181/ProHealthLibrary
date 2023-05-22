@@ -1,0 +1,7 @@
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 20% !important;
+    height: 30% !important;
+    box-shadow: 5px 8px #888888;
+    border: 1px solid black;
+}

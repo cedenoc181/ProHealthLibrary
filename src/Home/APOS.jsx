@@ -38,7 +38,7 @@ function APOS() {
             APOS therapy PDF
           </button>
         </a>
-        <Document file={APOS_que} onLoadSuccess={onDocumentSuccess}>
+        <Document className="doc" file={APOS_que} onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
     renderTextLayer={false}
