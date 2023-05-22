@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { FallingLines } from  'react-loader-spinner';
+import React, { useState, useEffect } from "react";
+import { FallingLines } from "react-loader-spinner";
 // jpg imports below
 import empire from "./Auth-Images/Auth-Empire.jpg";
 import metroPlus from "./Auth-Images/Auth-MetroPlus.jpg";
@@ -17,18 +17,13 @@ function AuthPDF() {
   const [overview3, setOverview3] = useState(true);
   const [overview4, setOverview4] = useState(true);
 
-
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
   const [isLoading3, setIsLoading3] = useState(false);
-  const [isLoading4,setIsLoading4] = useState(false);
+  const [isLoading4, setIsLoading4] = useState(false);
 
-   const imageRef = useRef(null);
-
-   useEffect(() => {
-    if (isLoading)
-    
-    {
+  useEffect(() => {
+    if (isLoading) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading(false);
@@ -37,11 +32,8 @@ function AuthPDF() {
     }
   }, [isLoading]);
 
-
   useEffect(() => {
-    if (isLoading2)
-    
-    {
+    if (isLoading2) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading2(false);
@@ -51,9 +43,7 @@ function AuthPDF() {
   }, [isLoading2]);
 
   useEffect(() => {
-    if (isLoading3)
-    
-    {
+    if (isLoading3) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading3(false);
@@ -63,9 +53,7 @@ function AuthPDF() {
   }, [isLoading3]);
 
   useEffect(() => {
-    if (isLoading4)
-    
-    {
+    if (isLoading4) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading4(false);
@@ -74,16 +62,12 @@ function AuthPDF() {
     }
   }, [isLoading4]);
 
-
-
-
   const handleRevert = () => {
     setOverview(true);
     setOverview2(true);
     setOverview3(true);
     setOverview4(true);
   };
-
 
   function handleClick() {
     setIsLoading(true);
@@ -122,12 +106,14 @@ function AuthPDF() {
       <div className="container">
         <div className="grid flex justify-center">
           <div className="image-container">
-            {isLoading ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview ? (
+            {isLoading ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview ? (
               <div>
                 <p className="image-label">
                   {" "}
@@ -158,16 +144,18 @@ function AuthPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading2 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview2 ? (
+            {isLoading2 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview2 ? (
               <div>
                 <p className="image-label"> MetroPlus Auth </p>
                 <img
@@ -195,16 +183,18 @@ function AuthPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading3 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview3 ? (
+            {isLoading3 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview3 ? (
               <div>
                 <p className="image-label"> Orthonet Auth</p>
                 <img
@@ -232,16 +222,18 @@ function AuthPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading4 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview4 ? (
+            {isLoading4 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview4 ? (
               <div>
                 <p className="image-label"> Palladian Auth </p>
                 <img
@@ -269,7 +261,7 @@ function AuthPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import { FallingLines } from  'react-loader-spinner'
 // jpg imports 
 import APOS_TP_E from "./APOS-Images/APOS-TP-cover.jpg"
@@ -59,7 +59,6 @@ function APOSPDF() {
   const [isLoading12, setIsLoading12] = useState(false);
   const [isLoading13, setIsLoading13] = useState(false);
   
-  const imageRef = useRef(null);
 
   useEffect(() => {
     if (isLoading)
@@ -486,7 +485,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Post 1 Year Eval English </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_1_Year_E}
     alt="APOS 1 year eval English"
     onClick={handleClick}
@@ -495,7 +493,7 @@ function APOSPDF() {
   ) :
         <div>
 
-          <iframe  ref={imageRef} title="APOS 1 year eval English" id="APOS 1 year eval English" style={{"border":"1px"}} src={post_1_year_e_pdf} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS 1 year eval English" id="APOS 1 year eval English" style={{"border":"1px"}} src={post_1_year_e_pdf} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -512,7 +510,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Post 1 Year Eval Spanish </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_1_Year_S}
     alt="APOS 1 year eval Spanish"
     onClick={handleClick2}
@@ -520,7 +517,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS 1 year eval Spanish" id="APOS 1 year eval Spanish" style={{"border":"1px"}} src={post_1_year_s_pdf} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS 1 year eval Spanish" id="APOS 1 year eval Spanish" style={{"border":"1px"}} src={post_1_year_s_pdf} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -538,7 +535,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Evaulation English </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Eval_E}
     alt="APOS Eval_E"
     onClick={handleClick3}
@@ -546,7 +542,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Eval form english" id="APOS Eval form english" style={{"border":"1px"}} src={eval_e} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Eval form english" id="APOS Eval form english" style={{"border":"1px"}} src={eval_e} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -563,7 +559,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Evaulation Spanish </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Eval_S}
     alt="APOS Eval_S"
     onClick={handleClick4}
@@ -571,7 +566,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe  ref={imageRef} title="APOS Eval form Spanish" id="APOS Eval form Spanish" style={{"border":"1px"}} src={eval_s} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Eval form Spanish" id="APOS Eval form Spanish" style={{"border":"1px"}} src={eval_s} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -588,7 +583,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Fitting Form English</p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Fitting_E}
     alt="APOS Fitting SO E"
     onClick={handleClick5}
@@ -596,7 +590,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Fitting SO E" id="APOS Fitting SO E" style={{"border":"1px"}} src={fitting_e} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Fitting SO E" id="APOS Fitting SO E" style={{"border":"1px"}} src={fitting_e} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -613,7 +607,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Fitting Form Spanish</p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Fitting_S}
     alt="APOS Fitting SO S"
     onClick={handleClick6}
@@ -621,7 +614,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Fitting SO S" id="APOS Fitting SO S" style={{"border":"1px"}} src={fitting_s} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Fitting SO S" id="APOS Fitting SO S" style={{"border":"1px"}} src={fitting_s} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -638,7 +631,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Treatment Plan Form English </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_TP_E}
     alt="APOS Treatment plan English"
     onClick={handleClick7}
@@ -646,7 +638,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Treatment Plan English" id="APOS Treatment Plan English" style={{"border":"1px"}} src={APOS_TP_E_pdf} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Treatment Plan English" id="APOS Treatment Plan English" style={{"border":"1px"}} src={APOS_TP_E_pdf} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -663,7 +655,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Treatment Plan Form Spanish </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_TP_S}
     alt="APOS Treatment plan Spanish"
     onClick={handleClick8}
@@ -671,7 +662,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Treatment Plan Spanish" id="APOS Treatment Plan Spanish" style={{"border":"1px"}} src={APOS_TP_S_pdf} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Treatment Plan Spanish" id="APOS Treatment Plan Spanish" style={{"border":"1px"}} src={APOS_TP_S_pdf} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -688,7 +679,6 @@ function APOSPDF() {
     <p className="image-label"> APOS New Patient Intake Form </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Intake}
     alt="APOS New Patient Intake Form"
     onClick={handleClick9}
@@ -696,7 +686,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS New Patient Intake Form" id="APOS New Patient Intake Form" style={{"border":"1px"}} src={new_intake} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS New Patient Intake Form" id="APOS New Patient Intake Form" style={{"border":"1px"}} src={new_intake} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -713,7 +703,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Follow up Form </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_FU}
     alt="APOS Follow up Form"
     onClick={handleClick10}
@@ -721,7 +710,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Follow up Form" id="APOS Follow up Form" style={{"border":"1px"}} src={follow_up} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Follow up Form" id="APOS Follow up Form" style={{"border":"1px"}} src={follow_up} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -738,7 +727,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Pick up sign off Form </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_PUSO}
     alt="APOS Pick up sign off Form"
     onClick={handleClick11}
@@ -746,7 +734,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS PUSO Form" id="APOS Follow up Form" style={{"border":"1px"}} src={puso} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS PUSO Form" id="APOS Follow up Form" style={{"border":"1px"}} src={puso} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -763,7 +751,6 @@ function APOSPDF() {
     <p className="image-label"> APOS New Patient Questionaire Form </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_new_Questionaire}
     alt="APOS New Patient Questionaire Form"
     onClick={handleClick12}
@@ -771,7 +758,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS New Patient Questionaire Form" id="APOS New Patient Questionaire Form" style={{"border":"1px"}} src={new_pt_questionaire} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS New Patient Questionaire Form" id="APOS New Patient Questionaire Form" style={{"border":"1px"}} src={new_pt_questionaire} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -788,7 +775,6 @@ function APOSPDF() {
     <p className="image-label"> APOS Checklist Form </p>
   <img
     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-    ref={imageRef}
     src={APOS_Checklist}
     alt="APOS Checklist Form"
     onClick={handleClick13}
@@ -796,7 +782,7 @@ function APOSPDF() {
   </div>
   ) :
         <div>
-          <iframe ref={imageRef} title="APOS Checklist Form" id="APOS Checklist Form" style={{"border":"1px"}} src={checklist} frameborder="1" height="450" width="450"></iframe>
+          <iframe title="APOS Checklist Form" id="APOS Checklist Form" style={{"border":"1px"}} src={checklist} frameborder="1" height="450" width="450"></iframe>
             <button className="close mt-5" onClick={handleRevert}>Close</button>
         </div>
         )}
@@ -809,20 +795,3 @@ function APOSPDF() {
 
 
 export default APOSPDF
-
-// { overview13 ? (
-//   <div>
-//     <p className="image-label"> APOS Checklist Form </p>
-//   <img
-//     className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-//     src={APOS_Checklist}
-//     alt="APOS Checklist Form"
-//     onClick={handleClick13}
-//   />
-//   </div>
-//   ) :
-//         <div>
-//           <iframe title="APOS Checklist Form" id="APOS Checklist Form" style={{"border":"1px"}} src={checklist} frameborder="1" height="450" width="450"></iframe>
-//             <button className="close mt-5" onClick={handleClick13}>Close</button>
-//         </div>
-//         }

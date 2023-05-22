@@ -5,7 +5,7 @@ function APOSPageDetails() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  console.log(pdfFiles)
+  console.log()
 
   function onDocumentSuccess({numPages}) {
     setNumPages(numPages)

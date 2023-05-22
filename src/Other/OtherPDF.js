@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { FallingLines } from  'react-loader-spinner';
+import React, { useState, useEffect } from "react";
+import { FallingLines } from "react-loader-spinner";
 // jpg imports below
 import Checklist from "./Others-Images/Others-APOS-Checklist-cover.jpg";
 import fitting_E from "./Others-Images/Others-APOS-Fitting-SO.jpg";
@@ -29,18 +29,13 @@ function OtherPDF() {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
   const [isLoading3, setIsLoading3] = useState(false);
-  const [isLoading4,setIsLoading4] = useState(false);
+  const [isLoading4, setIsLoading4] = useState(false);
   const [isLoading5, setIsLoading5] = useState(false);
   const [isLoading6, setIsLoading6] = useState(false);
   const [isLoading7, setIsLoading7] = useState(false);
 
-  const imageRef = useRef(null);
-
-
   useEffect(() => {
-    if (isLoading)
-    
-    {
+    if (isLoading) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading(false);
@@ -49,11 +44,8 @@ function OtherPDF() {
     }
   }, [isLoading]);
 
-
   useEffect(() => {
-    if (isLoading2)
-    
-    {
+    if (isLoading2) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading2(false);
@@ -63,9 +55,7 @@ function OtherPDF() {
   }, [isLoading2]);
 
   useEffect(() => {
-    if (isLoading3)
-    
-    {
+    if (isLoading3) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading3(false);
@@ -75,9 +65,7 @@ function OtherPDF() {
   }, [isLoading3]);
 
   useEffect(() => {
-    if (isLoading4)
-    
-    {
+    if (isLoading4) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading4(false);
@@ -87,9 +75,7 @@ function OtherPDF() {
   }, [isLoading4]);
 
   useEffect(() => {
-    if (isLoading5)
-    
-    {
+    if (isLoading5) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading5(false);
@@ -99,9 +85,7 @@ function OtherPDF() {
   }, [isLoading5]);
 
   useEffect(() => {
-    if (isLoading6)
-    
-    {
+    if (isLoading6) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading6(false);
@@ -111,9 +95,7 @@ function OtherPDF() {
   }, [isLoading6]);
 
   useEffect(() => {
-    if (isLoading7)
-    
-    {
+    if (isLoading7) {
       // Simulating an asynchronous operation
       setTimeout(() => {
         setIsLoading7(false);
@@ -121,7 +103,6 @@ function OtherPDF() {
       }, 2000); // Simulating a 2-second delay before showing the iframe
     }
   }, [isLoading7]);
-
 
   const handleRevert = () => {
     setOverview(true);
@@ -132,14 +113,6 @@ function OtherPDF() {
     setOverview6(true);
     setOverview7(true);
   };
-
-
-
-
-
-
-
-
 
   function handleClick() {
     setIsLoading(true);
@@ -223,12 +196,14 @@ function OtherPDF() {
       <div className="container">
         <div className="grid flex justify-center">
           <div className="image-container">
-            {isLoading ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview ? (
+            {isLoading ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview ? (
               <div>
                 <p className="image-label"> APOS Checklist </p>
                 <img
@@ -256,16 +231,18 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading2 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview2 ? (
+            {isLoading2 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview2 ? (
               <div>
                 <p className="image-label"> APOS Fitting form English </p>
                 <img
@@ -293,16 +270,18 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading3 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview3 ? (
+            {isLoading3 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview3 ? (
               <div>
                 <p className="image-label"> APOS Fitting form Spanish </p>
                 <img
@@ -330,16 +309,18 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading4 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview4 ? (
+            {isLoading4 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview4 ? (
               <div>
                 <p className="image-label"> Direct Access Form English </p>
                 <img
@@ -367,16 +348,18 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading5 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview5 ? (
+            {isLoading5 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview5 ? (
               <div>
                 <p className="image-label"> Direct Access Form Spanish </p>
                 <img
@@ -404,16 +387,18 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="image-container">
-            {isLoading6 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview6 ? (
+            {isLoading6 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview6 ? (
               <div>
                 <p className="image-label">Financial Hardship Form</p>
                 <img
@@ -441,15 +426,17 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
           <div className="image-container">
-            {isLoading7 ? ( <FallingLines
-  visible={true}
-  width="100"
-  ariaLabel="Falling-lines-loading"
-  color = '#0F659C'
-/>): (overview7 ? (
+            {isLoading7 ? (
+              <FallingLines
+                visible={true}
+                width="100"
+                ariaLabel="Falling-lines-loading"
+                color="#0F659C"
+              />
+            ) : overview7 ? (
               <div>
                 <p className="image-label">Financial Hardship Form Spanish</p>
                 <img
@@ -477,7 +464,7 @@ function OtherPDF() {
                   Close
                 </button>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
