@@ -49,11 +49,13 @@ function Authhome() {
     customTextRenderer={false}
     />
   </Document>
-  <p className="flex justify-evenly">
+  <p className="page flex justify-evenly">
     Page {pageNumber} of {numPages}
     </p> 
-    <button className="" onClick={nextPage}>Next Page</button>
-    <button className="" onClick={prevPage}>Previous Page</button>
+    <div className="flex justify-center border-t-2">
+    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
+    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
+    </div> 
       </div>
 
 

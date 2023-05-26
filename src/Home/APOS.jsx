@@ -32,12 +32,14 @@ function APOS() {
     <div>
 
 
-<div>
+<div className="flex justify-end">
+      <div className="flex ">
         <a href="/APOS">
           <button className="border border-blue-600 border-2 p-1 text-blue-500 hover:text-blue-800 hover:bg-gray-300 rounded font-semibold cursor-pointer">
             APOS therapy PDF
           </button>
         </a>
+      </div>
         <Document className="doc" file={APOS_que} onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
@@ -46,11 +48,13 @@ function APOS() {
     customTextRenderer={false}
     />
   </Document>
-  <p className="flex justify-evenly">
+  <p className="page flex justify-evenly">
     Page {pageNumber} of {numPages}
     </p> 
-    <button className="" onClick={nextPage}>Next Page</button>
-    <button className="" onClick={prevPage}>Previous Page</button>
+    <div className="flex text-align border-t-2">
+    <button className="btn align-right p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
+    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
+    </div>
         </div>
 
 

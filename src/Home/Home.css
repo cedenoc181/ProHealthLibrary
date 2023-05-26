@@ -1,7 +1,25 @@
 .react-pdf__Page__canvas {
-    margin: 0 auto;
+   margin-left: 70%;
     width: 20% !important;
     height: 30% !important;
     box-shadow: 5px 8px #888888;
     border: 1px solid black;
+}
+
+
+.page {
+    margin-top: 15px; 
+    margin-left: 77%;
+}
+
+button:hover{
+background-color: #888888;
+color: white;
+}
+
+.btn {
+float: right;
+margin-right: 9%;
+margin-bottom: 5%;
+
 }

@@ -38,7 +38,7 @@ function PTOT() {
             PT OT PDF
           </button>
         </a>
-        <Document className="doc" file={ptIntake} onLoadSuccess={onDocumentSuccess}>
+        <Document className="doc border-t-2 border-black" file={ptIntake} onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
     renderTextLayer={false}
@@ -46,11 +46,13 @@ function PTOT() {
     customTextRenderer={false}
     />
   </Document>
-  <p className="flex justify-evenly">
+  <p className="page flex justify-evenly">
     Page {pageNumber} of {numPages}
     </p> 
-    <button className="" onClick={nextPage}>Next Page</button>
-    <button className="" onClick={prevPage}>Previous Page</button>
+    <div className="flex justify-center">
+    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
+    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
+    </div>
         </div>
 
 
