@@ -1,16 +1,16 @@
 .react-pdf__Page__canvas {
    margin-left: 70%;
-    width: 20% !important;
+    width: 30% !important;
     height: 30% !important;
     box-shadow: 5px 8px #888888;
     border: 1px solid black;
 }
 
 
-.page {
+/* .page {
     margin-top: 15px; 
     margin-left: 77%;
-}
+} */
 
 button:hover{
 background-color: #888888;
@@ -22,4 +22,12 @@ float: right;
 margin-right: 9%;
 margin-bottom: 5%;
 
+}
+
+
+.authHome {
+    background: #0B5AD0;
+    background: -moz-linear-gradient(right, #0B5AD0 0%, #2039A0 22%, #000000 100%);
+    background: -webkit-linear-gradient(right, #0B5AD0 0%, #2039A0 22%, #000000 100%);
+    background: linear-gradient(to left, #0B5AD0 0%, #2039A0 22%, #000000 100%);
 }

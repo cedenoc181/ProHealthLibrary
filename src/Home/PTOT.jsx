@@ -30,7 +30,7 @@ function PTOT() {
       }
 
   return (
-    <div>
+    <div className="bg-gray-100 w-fill h-screen">
 
 <div>
         <a href="/PTOT">
@@ -38,7 +38,7 @@ function PTOT() {
             PT OT PDF
           </button>
         </a>
-        <Document className="doc border-t-2 border-black" file={ptIntake} onLoadSuccess={onDocumentSuccess}>
+        <Document className="" file={ptIntake} onLoadSuccess={onDocumentSuccess}>
     <Page 
     pageNumber={pageNumber}
     renderTextLayer={false}
@@ -50,8 +50,8 @@ function PTOT() {
     Page {pageNumber} of {numPages}
     </p> 
     <div className="flex justify-center">
-    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
-    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
+    <button className="p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
+    <button className="p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
     </div>
         </div>
 

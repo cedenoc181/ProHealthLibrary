@@ -1,7 +1,7 @@
 import React from "react";
-import APOS from "./APOS"
-import Auth from "./Authhome"
-import Ptot from "./PTOT"
+// import APOS from "./APOS"
+// import Auth from "./Authhome"
+// import Ptot from "./PTOT"
 import "./Home.css"
 
 
@@ -12,25 +12,24 @@ function Home() {
 
   return (
     <div className="bg-gray-100 w-fill h-screen">
-      <div className=" rounded p-16">
-        <p className="p-10 font-semibold text-gray-600 text-3xl shadow-2xl">
-          Welcome to Pro Health and Fitness PDF library, This application allows
+      <h2 className="flex justify-center text-gray-600 font-semibold pt-10 text-3xl"> Pro Health and Fitness library</h2>
+      <div className=" rounded-lg p-16">
+        <p className="p-5 font-semibold text-gray-600 text-2xl shadow-2xl">
+          This application allows
           therapists and administrative staff to quickly access the documents
           they need. It serves as a centralized repository for all the PDF
           documents needed for clinical operations, such as patient intake
           forms, APOS treatment plans, Direct Access form, APOS follow up
-          questionaire and much more.
+          questionaire and much more. Find your document above!
         </p>
       </div>
-      <div>
-        <APOS />
-        </div>
-      <div>
+      
+        {/* <APOS />
+        
         <Auth />
-        </div>
-      <div>
+      
         <Ptot />
-        </div>
+         */}
 
       <div className="border-t-2 shadow-xs border-gray-200">
 

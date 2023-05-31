@@ -29,7 +29,7 @@ function Navigation() {
             to="/PTOT"
             id="PTOT"
           >
-            Physical and Occupational therapy-PDF
+            Physical and Occupational therapy
           </NavLink>
         </li>
         <li class="mt-6 mr-1">
@@ -38,7 +38,7 @@ function Navigation() {
             to="/APOS"
             id="APOS"
           >
-            APOS-PDF
+            APOS therapy
           </NavLink>
         </li>
         <li class="mt-6 mr-1">
@@ -47,7 +47,7 @@ function Navigation() {
             to="/Auth"
             id="Auth"
           >
-            Auth-PDF
+            Authorization
           </NavLink>
         </li>
         <li class="mt-6 mr-1">
@@ -56,16 +56,16 @@ function Navigation() {
             to="/Other"
             id="Other"
           >
-            Single-PDF
+            Other documents
           </NavLink>
         </li>
-        <form class="flex ml-auto">
+        {/* <form class="flex ml-auto">
           <input
             class="mt-6 mr-3 border rounded-md border-gray-500 h-8  p-1 text-left border-2 hover:bg-blue-100 cursor-pointer"
             type="search"
             placeholder="Search PDF..."
           />
-        </form>
+        </form> */}
       </ul>
     </nav>
   );

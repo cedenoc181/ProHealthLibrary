@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import ortho from "./Home-pdf/Orthonet-authform.pdf"
+import ortho from "./Home-pdf/Orthonet-authform.pdf";
+import "./Home.css";
 
 function Authhome() {
 
@@ -32,7 +33,7 @@ function Authhome() {
 
 
   return (
-    <div>
+    <div className="authHome w-fill h-screen">
 
 <div>
         <a href="/Auth">
@@ -52,10 +53,10 @@ function Authhome() {
   <p className="page flex justify-evenly">
     Page {pageNumber} of {numPages}
     </p> 
-    <div className="flex justify-center border-t-2">
-    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
-    <button className="btn p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
-    </div> 
+    <div className="flex justify-center">
+    <button className="p-2 m-2 border-2 border-black rounded" onClick={prevPage}>Previous Page</button>
+    <button className="p-2 m-2 border-2 border-black rounded" onClick={nextPage}>Next Page</button>
+    </div>
       </div>
 
 
