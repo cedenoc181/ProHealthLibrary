@@ -5,23 +5,32 @@ import intake_E_cover from "./PTOT-Images/PTOT-Intake-E-cover.jpg";
 import intake_S_cover from "./PTOT-Images/PTOT-Intake-S-cover.jpg";
 import R_intake_E_cover from "./PTOT-Images/PTOT-R-Intake-E-cover.jpg";
 import R_intake_S_cover from "./PTOT-Images/PTOT-R-Intake-S-cover.jpg";
+import Hf_Acknowledgement_cover from "./PTOT-Images/PTOT-HF-Acknowledgement.jpg"
+import Hf_Acknowledgement_S_cover from "./PTOT-Images/PTOT-HF-Acknowledgement-Spanish.jpg"
+
 
 // pdf imports
 import intake_E_pdf from "./PTOT-files/PTOT-Intake-E.pdf";
 import intake_S_pdf from "./PTOT-files/PTOT-Intake-S.pdf";
 import R_intake_E_pdf from "./PTOT-files/PTOT-R-Intake-E.pdf";
 import R_intake_S_pdf from "./PTOT-files/PTOT-R-Intake-S.pdf";
+import Pt_Acknowledgement_PDF from "./PTOT-files/PTOT-HF-Acknowledgement.pdf"
+import Pt_Acknowledgement_S_PDF from "./PTOT-files/PTOT-HF-Acknowledgement-Spanish.pdf"
 
 function PTOTPDF() {
   const [overview, setOverview] = useState(true);
   const [overview2, setOverview2] = useState(true);
   const [overview3, setOverview3] = useState(true);
   const [overview4, setOverview4] = useState(true);
+  const [overview5, setOverview5] = useState(true);
+  const [overview6, setOverview6] = useState(true);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
   const [isLoading3, setIsLoading3] = useState(false);
   const [isLoading4, setIsLoading4] = useState(false);
+  const [isLoading5, setIsLoading5] = useState(false);
+  const [isLoading6, setIsLoading6] = useState(false);
 
   useEffect(() => {
     if (isLoading) {
@@ -63,11 +72,38 @@ function PTOTPDF() {
     }
   }, [isLoading4]);
 
+
+  useEffect(() => {
+    if (isLoading5) {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading5(false);
+        setOverview5(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading5]);
+
+
+
+  useEffect(() => {
+    if (isLoading6) {
+      // Simulating an asynchronous operation
+      setTimeout(() => {
+        setIsLoading6(false);
+        setOverview6(false);
+      }, 2000); // Simulating a 2-second delay before showing the iframe
+    }
+  }, [isLoading6]);
+
+
+
   const handleRevert = () => {
     setOverview(true);
     setOverview2(true);
     setOverview3(true);
     setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
   };
 
   function handleClick() {
@@ -76,6 +112,8 @@ function PTOTPDF() {
     setOverview2(true);
     setOverview3(true);
     setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
   }
 
   function handleClick2() {
@@ -84,6 +122,8 @@ function PTOTPDF() {
     setOverview(true);
     setOverview3(true);
     setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
   }
 
   function handleClick3() {
@@ -92,6 +132,8 @@ function PTOTPDF() {
     setOverview(true);
     setOverview2(true);
     setOverview4(true);
+    setOverview5(true);
+    setOverview6(true);
   }
 
   function handleClick4() {
@@ -100,7 +142,30 @@ function PTOTPDF() {
     setOverview(true);
     setOverview2(true);
     setOverview3(true);
+    setOverview5(true);
+    setOverview6(true);
   }
+
+  function handleClick5() {
+    setIsLoading5(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview6(true);
+  }
+
+  function handleClick6() {
+    setIsLoading6(true);
+
+    setOverview(true);
+    setOverview2(true);
+    setOverview3(true);
+    setOverview4(true);
+    setOverview5(true);
+  }
+
 
   return (
     <div className="container">
@@ -127,7 +192,7 @@ function PTOTPDF() {
             <div>
               <iframe
                 title="Intake English"
-                id="Intake English"
+                id="Intake-English"
                 style={{ border: "1px" }}
                 src={intake_E_pdf}
                 frameborder="1"
@@ -163,7 +228,7 @@ function PTOTPDF() {
             <div>
               <iframe
                 title="Intake Spanish"
-                id="Intake Spanish"
+                id="Intake-Spanish"
                 style={{ border: "1px" }}
                 src={intake_S_pdf}
                 frameborder="1"
@@ -199,7 +264,7 @@ function PTOTPDF() {
             <div>
               <iframe
                 title="Returning Intake English"
-                id="Returning Intake English"
+                id="Returning-Intake-English"
                 style={{ border: "1px" }}
                 src={R_intake_E_pdf}
                 frameborder="1"
@@ -235,7 +300,7 @@ function PTOTPDF() {
             <div>
               <iframe
                 title="Returning Intake Spanish"
-                id="Returning Intake Spanish"
+                id="Returning-Intake-Spanish"
                 style={{ border: "1px" }}
                 src={R_intake_S_pdf}
                 frameborder="1"
@@ -250,6 +315,85 @@ function PTOTPDF() {
             </div>
           )}
         </div>
+
+        <div className="image-container">
+          {isLoading5 ? (
+            <FallingLines
+              visible={true}
+              width="100"
+              ariaLabel="Falling-lines-loading"
+              color="#0F659C"
+            />
+          ) : overview5 ? (
+            <div>
+              <p className="image-label"> HF Acknowledgement</p>
+              <img
+                className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+                src={Hf_Acknowledgement_cover}
+                alt="HF Beneficiary Acknowledgement form"
+                onClick={handleClick5}
+              />
+            </div>
+          ) : (
+            <div>
+              <iframe
+                title="HF Beneficiary Acknowledgement form"
+                id="HF-Beneficiary-Acknowledgement-form"
+                style={{ border: "1px" }}
+                src={Pt_Acknowledgement_PDF}
+                frameborder="1"
+                height="450"
+                width="450"
+              >
+                HF Acknowledgement
+              </iframe>
+              <button className="close mt-5 " onClick={handleRevert}>
+                Close
+              </button>
+            </div>
+          )}
+        </div>
+
+        <div className="image-container">
+          {isLoading6 ? (
+            <FallingLines
+              visible={true}
+              width="100"
+              ariaLabel="Falling-lines-loading"
+              color="#0F659C"
+            />
+          ) : overview6 ? (
+            <div>
+              <p className="image-label"> HF Acknowledgement Spanish</p>
+              <img
+                className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
+                src={Hf_Acknowledgement_S_cover}
+                alt="HF Beneficiary Acknowledgement Spanish form"
+                onClick={handleClick6}
+              />
+            </div>
+          ) : (
+            <div>
+              <iframe
+                title="HF Beneficiary Acknowledgement Spanish form"
+                id="HF-Beneficiary-Acknowledgement-Spanish-form"
+                style={{ border: "1px" }}
+                src={Pt_Acknowledgement_S_PDF}
+                frameborder="1"
+                height="450"
+                width="450"
+              >
+                HF Acknowledgement Spanish
+              </iframe>
+              <button className="close mt-5 " onClick={handleRevert}>
+                Close
+              </button>
+            </div>
+          )}
+        </div>
+
+
+
       </div>
     </div>
   );
