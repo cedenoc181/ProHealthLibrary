@@ -16,6 +16,11 @@ import directAccess_E from "./Other-files/Others-DA.pdf";
 import directAccess_S from "./Other-files/Others-DA-S.pdf";
 import FinancialH from "./Other-files/Others-FH.pdf";
 import FinancialH_S from "./Other-files/Others-FH-S.pdf";
+// Doc imports below 
+import Post_year_md_letter from "./Others-files/Others-APOS-1-Year-MD-letter.docx"
+import Seen_md_letter from "./Others-files/Others-APOS-Seen-MD-letter.docx"
+import Not_Seen_md_letter from "./Others-files/Others-APOS-Not-Seen-MD-letter.docx"
+import Excuse_letter from "./Others-files/Others-Excuse-Letter.docx"
 
 function OtherPDF() {
   const [overview, setOverview] = useState(true);
