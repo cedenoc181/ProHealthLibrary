@@ -12,7 +12,7 @@ import APOS1YEAR from "./Others-Images/Others-APOS-1-year-MD-letter.jpg";
 import NOT_SEEN from "./Others-Images/Others-APOS-NOT-Seen-MD-letter.jpg";
 import Seen from "./Others-Images/Others-APOS-Seen-MD-letter.jpg";
 import Ex_letter from "./Others-Images/Others-Excuse-Letter.jpg";
-import HF_PT_Form_Cover from "./OThers-Images/Others-PTOT-HF-Acknowledgement.jpg";
+import HF_PT_Form_Cover from "./Others-Images/Others-PTOT-HF-Acknowledgement.jpg";
 import HF_PT_Form_S_Cover from "./Others-Images/Others-PTOT-HF-Acknowledgement.jpg";
 import HF_APOS_Form_Cover from "./Others-Images/Others-HF-APOS-Acknowledgement.jpg";
 
