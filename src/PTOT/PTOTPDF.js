@@ -5,7 +5,7 @@ import intake_E_cover from "./PTOT-Images/PTOT-Intake-E-cover.jpg";
 import intake_S_cover from "./PTOT-Images/PTOT-Intake-S-cover.jpg";
 import R_intake_E_cover from "./PTOT-Images/PTOT-R-Intake-E-cover.jpg";
 import R_intake_S_cover from "./PTOT-Images/PTOT-R-Intake-S-cover.jpg";
-import Hf_Acknowledgement_cover from "./PTOT-Images/PTOT-HF-Acknowledgement.jpg"
+// import Hf_Acknowledgement_cover from "./PTOT-Images/PTOT-HF-Acknowledgement.jpg"
 import Hf_Acknowledgement_S_cover from "./PTOT-Images/PTOT-HF-Acknowledgement-Spanish.jpg"
 
 
@@ -329,7 +329,7 @@ function PTOTPDF() {
               <p className="image-label"> HF Acknowledgement</p>
               <img
                 className="img-thumbnail shadow-2xl hover:border-blue-500 cursor-pointer"
-                src={Hf_Acknowledgement_cover}
+                src={Hf_Acknowledgement_S_cover}
                 alt="HF Beneficiary Acknowledgement form"
                 onClick={handleClick5}
               />
