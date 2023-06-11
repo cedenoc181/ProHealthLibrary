@@ -790,7 +790,6 @@ function OtherPDF() {
             )}
           </div>
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
           <div className="image-container">
             {isLoading8 ? (
               <FallingLines
@@ -944,7 +943,7 @@ function OtherPDF() {
                   className="close mt-5 flex align-center justify-center"
                   onClick={handleRevert}
                 >
-                  Close
+                  Close 
                 </button>
               </div>
             )}

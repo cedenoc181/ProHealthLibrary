@@ -1,0 +1,11 @@
+
+.close{
+    text-decoration: none;
+}
+
+.close:hover{
+color: rgba(194, 32, 32, 0.666);
+background-color:lightgray;
+border-radius: 100%;
+text-decoration: none;
+}
